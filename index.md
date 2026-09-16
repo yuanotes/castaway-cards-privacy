@@ -48,14 +48,13 @@ If you email us, we process your email address, message, and any attachments you
 
 ### 5. Storage, retention, and international processing
 
-Mixpanel may process data outside your country or region. Its Data Processing Addendum describes hosting in the United States by default, or in Europe or India depending on the customer’s project configuration and service arrangements. It also describes applicable transfer safeguards, including the Data Privacy Framework and Standard Contractual Clauses. A hosting-region choice does not by itself mean that all processing or access is confined to your country. Data protection rules vary between jurisdictions. You can decline or withdraw consent if you do not want this optional processing.
+Our Mixpanel project uses **United States data residency**. Mixpanel may process data outside your country or region. The Data Processing Addendum describes applicable transfer safeguards, including the Data Privacy Framework and Standard Contractual Clauses. A hosting-region choice does not by itself mean that all processing or access is confined to your country. Data protection rules vary between jurisdictions. You can decline or withdraw consent if you do not want this optional processing.
 
-Mixpanel’s published [Data Retention Policy](https://docs.mixpanel.com/docs/privacy/gdpr-compliance#data-retention-policy) states:
+Our project was created on September 16, 2026. Mixpanel’s published [Data Retention Policy](https://docs.mixpanel.com/docs/privacy/gdpr-compliance#data-retention-policy) provides the following standard event-data retention for projects created after September 1, 2025:
 
-| Event-data arrangement | Published retention |
+| Data category | Published standard retention |
 | --- | --- |
-| Standard event retention from September 1, 2025 | 2 years from the event date |
-| Certain projects created before September 1, 2025 | 5 years, reduced to 2 years when their plan is changed or they move to the Free Plan |
+| Game analytics events | 2 years from the event date |
 
 Applicable contractual terms or a configured shorter retention period may differ. These provider periods are not promises that withdrawal immediately deletes data, and should not be confused with dashboard date ranges. We do not create People profiles or collect Session Replay recordings, which have separate provider retention rules. We handle deletion requests under applicable terms and law; legally required records and results that can no longer reasonably identify a person may follow different arrangements.
 
