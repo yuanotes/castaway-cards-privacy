@@ -6,7 +6,7 @@ title: Castaway Cards — Privacy Policy
 # Castaway Cards
 ## Privacy Policy
 
-> **Effective date: 2026-09-16 — Mixpanel integration**
+> **Effective date: 2026-10-07 — Default-enabled analytics with opt-out**
 
 ### 1. Who is responsible and what this notice covers
 
@@ -18,19 +18,21 @@ Steam’s own processing of accounts, purchases, payments, and platform services
 
 ### 2. Your choice
 
-Analytics and error reporting are off by default for players. The Mixpanel SDK is initialized only after you expressly agree in the game and collection is enabled for that release. Declining or dismissing the initial prompt does not count as consent and does not prevent normal gameplay.
+Gameplay analytics, playtime and performance reporting, and basic error reporting are **enabled by default**, unless you have explicitly declined or turned collection off. There is no startup consent prompt. The Mixpanel SDK starts only when both the release-level collection switch and your locally stored collection preference are enabled.
 
-You can reopen the data collection options in the game settings and withdraw consent at any time. Consent is our basis for this optional processing. Withdrawal stops new reporting, clears the SDK’s pending local event queue, and disables the SDK. It does not automatically delete data already received, recall requests already sent, or affect the lawfulness of processing based on valid consent before withdrawal.
+You can open **Privacy & diagnostics** in the game settings and choose **Decline & turn off** at any time. This stops new reporting, clears the SDK’s pending local event queue, and disables the SDK. It does not automatically delete data already received or recall requests already sent. Closing the settings panel does not change your preference.
 
-Your choice is stored on your device. You may continue playing without analytics; you do not need to supply an email address or SteamID to play. Earlier consent to GameAnalytics does **not** authorize Mixpanel: the updated game asks for a new choice.
+Your preference is stored on your device. A stored rejection remains off on later launches and game restarts; collection resumes only if you explicitly turn it on again. You may continue playing without analytics, and do not need to supply an email address or SteamID to play. The current Mixpanel preference is separate from earlier GameAnalytics choices; those earlier choices are not evidence of express consent to Mixpanel.
+
+Default-enabled collection and a failure to decline are **not express consent**. This notice describes the current implementation; it is not a determination that an opt-out mechanism alone satisfies every jurisdiction’s lawful-basis, prior-consent, or children’s-data requirements.
 
 ### 3. Data collected
 
-After consent, this integration may process:
+While collection is enabled, this integration may process:
 
-- **Gameplay information:** gameplay activity, progression, and outcomes, used to understand how the game is played and improve its design. Agreeing during a run does not backfill earlier gameplay events: run-progress tracking starts with the next run.
-- **Playtime and session information:** event times, random session and event identifiers, and foreground running time from the moment of consent. Timing pauses while the application is in the background or suspended. Foreground menus and idle time are included; this is not a measure of continuous interaction or Steam’s official playtime. The game records periodic time increments and a best-effort session-end summary. Crashes, interrupted delivery and offline limits can make the data incomplete.
-- **Identifiers and technical information:** an SDK-generated random identifier retained across sessions on the device, the consent-notice version, game and SDK versions, operating system and platform, device model, screen dimensions and density, and network connection type. Receiving servers process the IP address associated with network requests. We disable the SDK option to use the client IP address for geolocation; this does not hide that address from the receiving service or remove its operational network logs.
+- **Gameplay information:** gameplay activity, progression, and outcomes, used to understand how the game is played and improve its design. Turning collection on during a run does not backfill earlier gameplay events: run-progress tracking starts with the next run.
+- **Playtime and session information:** event times, random session and event identifiers, and foreground running time from the moment collection starts. Timing pauses while the application is in the background or suspended. Foreground menus and idle time are included; this is not a measure of continuous interaction or Steam’s official playtime. The game records periodic time increments and a best-effort session-end summary. Crashes, interrupted delivery and offline limits can make the data incomplete.
+- **Identifiers and technical information:** an SDK-generated random identifier retained across sessions on the device, the collection-preference/notice version (the event property remains named `consent_version`), game and SDK versions, operating system and platform, device model, screen dimensions and density, and network connection type. Receiving servers process the IP address associated with network requests. We disable the SDK option to use the client IP address for geolocation; this does not hide that address from the receiving service or remove its operational network logs.
 - **Performance information:** foreground frame-rate samples, average FPS and low-frame-rate sample counts to assess smoothness.
 - **Basic error information:** Unity error, exception, warning, and assertion messages, together with available stack traces. The game limits this reporting to 10 events per launch, including warnings. Message and stack-trace lengths are limited. This is not comprehensive capture of every error or native desktop crash.
 
@@ -48,7 +50,7 @@ If you email us, we process your email address, message, and any attachments you
 
 ### 5. Storage, retention, and international processing
 
-Our Mixpanel project uses **United States data residency**. Mixpanel may process data outside your country or region. The Data Processing Addendum describes applicable transfer safeguards, including the Data Privacy Framework and Standard Contractual Clauses. A hosting-region choice does not by itself mean that all processing or access is confined to your country. Data protection rules vary between jurisdictions. You can decline or withdraw consent if you do not want this optional processing.
+Our Mixpanel project uses **United States data residency**. Mixpanel may process data outside your country or region. The Data Processing Addendum describes applicable transfer safeguards, including the Data Privacy Framework and Standard Contractual Clauses. A hosting-region choice does not by itself mean that all processing or access is confined to your country. Data protection rules vary between jurisdictions. You can decline and turn collection off if you do not want this optional processing.
 
 Our project was created on September 16, 2026. Mixpanel’s published [Data Retention Policy](https://docs.mixpanel.com/docs/privacy/gdpr-compliance#data-retention-policy) provides the following standard event-data retention for projects created after September 1, 2025:
 
@@ -56,9 +58,9 @@ Our project was created on September 16, 2026. Mixpanel’s published [Data Rete
 | --- | --- |
 | Game analytics events | 2 years from the event date |
 
-Applicable contractual terms or a configured shorter retention period may differ. These provider periods are not promises that withdrawal immediately deletes data, and should not be confused with dashboard date ranges. We do not create People profiles or collect Session Replay recordings, which have separate provider retention rules. We handle deletion requests under applicable terms and law; legally required records and results that can no longer reasonably identify a person may follow different arrangements.
+Applicable contractual terms or a configured shorter retention period may differ. These provider periods are not promises that turning collection off immediately deletes data, and should not be confused with dashboard date ranges. We do not create People profiles or collect Session Replay recordings, which have separate provider retention rules. We handle deletion requests under applicable terms and law; legally required records and results that can no longer reasonably identify a person may follow different arrangements.
 
-The SDK stores its random identifier and pending authorized events locally. During normal operation, unsent authorized events can be retried on a later launch while consent remains valid; delivery is not guaranteed, particularly after a long offline period. On withdrawal, we clear pending events, but retain the local random identifier and consent choice. If you agree again, future events can therefore be associated with earlier authorized activity; no activity from the period without consent is backfilled. Uninstalling the game may not remove all local data.
+The SDK stores its random identifier and pending events locally. During normal operation, unsent events can be retried on a later launch while collection remains enabled; delivery is not guaranteed, particularly after a long offline period. When you decline and turn collection off, we clear pending events but retain the local random identifier and your rejection preference. If you explicitly turn collection on again, future events can therefore be associated with earlier collected activity; no activity from the period with collection off is backfilled. Uninstalling the game may not remove all local data.
 
 Earlier releases used GameAnalytics. Replacing that SDK does not delete records already received by GameAnalytics or stop an old installed release from operating under its previous consent. This updated integration does not send new events to GameAnalytics or copy its historical data into Mixpanel. Contact us about requests concerning those earlier records; the [previous notice](https://github.com/yuanotes/castaway-cards-privacy/blob/a515ce2922e256e9c523d4dba7d431bc1d2ca236/index.md) describes that processing.
 
@@ -66,11 +68,11 @@ Privacy correspondence is retained for as long as needed to handle the request a
 
 ### 6. Your rights and contact
 
-Depending on applicable law, you may have rights to access, correct, delete, restrict processing, obtain portable data, object to processing, and complain to a data protection authority. You can always withdraw consent for these optional analytics in the game.
+Depending on applicable law, you may have rights to access, correct, delete, restrict processing, obtain portable data, object to processing, and complain to a data protection authority. You can always decline and turn off these optional analytics in the game.
 
 Contact **[yuanotes@gmail.com](mailto:yuanotes@gmail.com)** to make a request. We may ask for necessary version, platform, or locally stored analytics identifier information to verify the request and locate records. Because analytics use random identifiers, an email address or SteamID alone may not identify those records. We will explain what information is needed and work with the relevant provider as required by applicable law. Please do not post personal data in public GitHub issues.
 
-If you have not reached the age at which you can independently consent to this processing under local law, do not enable analytics yourself. A parent or guardian can contact us with questions about children’s data or deletion requests. The game currently has no age-identification or parental-verification feature; its general consent button does not replace any additional authorization procedures required by law.
+If local law requires parental or guardian authorization for this processing and you cannot provide it, turn collection off in **Privacy & diagnostics**. A parent or guardian can contact us with questions about children’s data or deletion requests. The game currently has no age-identification or parental-verification feature. Default-enabled collection and the settings buttons do not replace any prior consent or additional authorization procedures required by law.
 
 ### 7. This policy website
 
